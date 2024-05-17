@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace UniversidadService
 {
     public class Materia
-    {   public int AñoAsignado {  get; set; }
+    {
+        public string NombreMateria { get; set; }
+        public int AñoAsignado {  get; set; }
         public int AñoCursado { get; set; }
         public List<MesaDeExamen> MesasDeExamenes { get; set; }
 

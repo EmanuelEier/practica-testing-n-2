@@ -10,6 +10,7 @@ namespace UniversidadService
     {
         Alumno alumno = new Alumno();
         public List<Alumno> Alumnos { get; set; }
+
         public Lógica()
         {
             Alumnos = new List<Alumno>();
@@ -21,9 +22,9 @@ namespace UniversidadService
         public List<ExamenAprobado> ExamenesAprobados(int DNI)
         {
 
-            var ExamenAlumno = Alumnos.Find(x => x.DNI == alumno.DNI);
+            Alumno alumno = Alumnos.Find(x => x.DNI == DNI); //ES COMO SI AGARRARA UN NUEVO ALUMNO.
 
-            foreach (var Materia in ExamenAlumno.Materias)
+            foreach (var Materia in alumno.Materias)
             {
                 foreach (var Examen in Materia.MesasDeExamenes)
                 {
@@ -31,23 +32,26 @@ namespace UniversidadService
                     {
                         ExamenAprobado examenaprobado = new ExamenAprobado()
                         {
-                            AñoAsignado = Examen.AñoAsignado,
-                            AñoCursado = Examen.AñoCursado,
-                            Carrera = Examen.Carrera,
-                            mesa = Examen.mesa,
+                            AñoAsignado = Materia.AñoAsignado,
+                            AñoCursado = Materia.AñoCursado,
+                            Carrera = alumno.Carrera,
+                            mesa = (ExamenAprobado.Mesa)(int)Examen.mesa,
                             NotaFinal = Examen.NotaFinal,
-                            Nombre = Examen.Nombre,
-                            NombreMateria = Examen.NombreMateria
+                            Nombre = alumno.Nombre,
+                            NombreMateria = Materia.NombreMateria
                          };
 
                        examenesaprobados.Add(examenaprobado);
                      }
                 }    
             }
-
+            return examenesaprobados;
 
         }
-      
 
     }
+
+    public void MateriasNoAprobadasEnMesa(Mesa(mesa)) 
+    {}
+
 }
