@@ -17,7 +17,7 @@ namespace UniversidadService
         }
 
 
-        public class List Materia(string Carrera, int AñoAsignado, int AñoCursado)
+       /* public List Materia(string Carrera, int AñoAsignado, int AñoCursado)
         {
             switch (Carrera)
             {
@@ -25,6 +25,6 @@ namespace UniversidadService
                     List<Materia> MateriasCursadas = new List<Materia> { "Lengua" };
                     break;
             }
-        }
+        }*/
     }
 }

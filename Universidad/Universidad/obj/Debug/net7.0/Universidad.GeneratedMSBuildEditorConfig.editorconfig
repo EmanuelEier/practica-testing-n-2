@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Universidad
-build_property.ProjectDir = C:\Users\Emaa\Documents\Emanuel C#\practica-testing-n-2\Universidad\Universidad\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\UCSE\Documents\Emanuel C#\practica-testing-n-2\practica-testing-n-2\Universidad\Universidad\

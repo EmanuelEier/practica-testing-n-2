@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 namespace UniversidadService
 {
     public class AlumnoAprobado
+
+        public string Nombre { get; set; }
+        public string Carrera { get; set; }
+        public string 
     {
         public List<AlumnoAprobado> AlumnosAprobados = new List<AlumnoAprobado>();
         public AlumnoAprobado()
@@ -15,16 +19,8 @@ namespace UniversidadService
 
         }
 
-        public void ExamenesAprobados(string Nombre, MesaDeExamen MesasDeExamenes)
-        {
+        
 
-            if (Alumno >= 4) { 
-                AlumnoAprobado AlumnoAprobado = new AlumnoAprobado();
-                AlumnosAprobados.Add (AlumnoAprobado);
-            } else if 
-            {
-                Console.WriteLine("No existe tal alumno.");
-            }
         }
     }
 }
